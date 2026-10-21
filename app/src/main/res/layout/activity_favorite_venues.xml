@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Rounded Background Container fills the whole screen -->
+    <LinearLayout
+        android:id="@+id/roundedBackgroundContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_background"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:ignore="ExtraText">
+
+        <!-- Static Character Name -->
+        <TextView
+            android:id="@+id/characterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Character's Favorite Locations"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Static City Name -->
+        <TextView
+            android:id="@+id/in_cityName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="In Aalborg"
+            android:textStyle="italic" />
+
+        <!-- Scrollable Venue Info Section -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false">
+
+            <LinearLayout
+                android:id="@+id/venueInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="8dp">
+
+                <!-- Dynamic venue items will be added here -->
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Static Character Image placed at bottom inside background -->
+        <ImageView
+            android:id="@+id/characterImage"
+            android:layout_width="153dp"
+            android:layout_height="239dp"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="start" />
+
+    </LinearLayout>
+
+    <!-- Floating Back Button (outside rounded bg) -->
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_gravity="end|top"
+        android:layout_margin="16dp"
+        android:src="@drawable/cross"
+        android:contentDescription="Back to CharacterDetailActivity"
+        android:background="?android:attr/selectableItemBackgroundBorderless" />
+
+</FrameLayout>

@@ -1,0 +1,59 @@
+# ProjectApp8sem
+ Project for 8th sem DAD
+
+
+** Download Android Studio  
+
+Kan downloades fra det her link: https://developer.android.com/studio  
+
+Det er bedst at sige ja til de extra features man kan vælge til, men har selv sagt nej til at sende crash-report data til dem.  
+
+Comprehensive Android Studio Guide: https://www.geeksforgeeks.org/android-studio-tutorial/ 
+
+** Android Studio Noter 
+
+Her er mange prebuilt templates med maps og sliders mm., vi kan tage inspiration fra. Kommer med telefon emulator.  
+
+Java koden høre under java mappen, som bliver lavet når et nyt projekt genereres.  
+
+Billeder og andre rescourcer appen bruger høre under res mappen, som også bliver lavet når et nyt projekt genereres. Tutorial for fil strukturen og hvad de forskellige filer/mapper indeholder: https://www.geeksforgeeks.org/android-android-apps-file-structure/ 
+
+res/drawable mappen er for billeder.  
+
+res/values har xml filer med farver og tekst, hvor de defineres og bliver 	referenced. 
+
+XML er et andet sprog som mange af reference(?) filerne i en android app bruger. XML minder meget om HTML. Det står for extendable markup language. I xml skal man selv definere tags. Ingen er pre-defineret.  
+
+Android Studio bruger Gradle til at compile ens kode, og den gør mappestrukturen, som den ser ud i ens IDE, mere overskuelig (er håbet).  
+
+Det er i filen build.gradle (kaldet for et build script) at dependencies og libraries, som projektet bruger, bliver “anerkent” af gradle når man compiler. 
+
+Gradles build script burde ligge “øvers” i ens repocitory og ikke i en undermappe, for at gradle kan gøre sin ting (er min erfaring). 
+
+gradlew (for mac) and gradlew.bat (for windows) files are wrappers(?) which run gralde and make sure the currect version is used. 
+
+Man kan bruge gradle i stedet for en IDE som Android studio, og den her video forklare hvad gradle er, og giver noget kontekst for, hvorfor gradle er som den her. Man kan måske sige, at Android studio “hjælper os med at bruge gradle”. https://www.youtube.com/watch?v=-dtcEMLNmn0  
+
+Android Views bruges til UI i stedet for JavaFX. 
+
+** Download Github Desktop 
+
+Github desktop bruger vi til at uploade og downloade vores kodning mellem vores egen computer og vores online repocitory på github.com.  
+
+Kan downloades på: https://desktop.github.com/download/ 
+
+Tutorial der, fra step 2 og efter, gemmengår hvordan det fungere med at commit de ændringer man har lavet lokalt, push dem til ens repocitory, og hvordan man fra repocitiret laver en pull request og vælger, at ændringerne skal bruges. Den forklarer også hvordan man bruger forskellige branches så flere mennesker kan arbejde på forskellige dele af projektet samtidig, uden at komme i vejen for hinanden. Tutorialen bruger github hjemmesiden i stedet for github desktop, men det fungerer på samme måde: https://docs.github.com/en/get-started/start-your-journey/hello-world 
+
+
+At sætte Android Studio og Github op sammen. 
+
+- Start med at downloade Android Studio, og tjek at det virker ved at lave et test projekt, som du godt kan slette lige bag efter. 
+- Få downloaded Github Desktop og logget ind med din Github bruger. 
+- Lav en mappe på din computer, hvor du gerne vil have koden til projektet gemt. 
+- Fra Github Desktop skal du vælge at downloade vores online repository “ProjectApp8sem”, og putte det in den mappe du lavede før. 
+- I Android Studio, åben projektet “ProjectApp8sem”. 
+
+Ændringer i laver i filerne burde nu kunne ses i Github Desktop, og kan pushes til en af repositoriets branches.
+
+
+Hej, virker det?

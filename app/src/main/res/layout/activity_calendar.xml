@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- TOP SECTION -->
+    <include
+        android:id="@+id/topSection"
+        layout="@layout/category_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="77dp" />
+
+    <!-- Month navigation -->
+    <LinearLayout
+        android:id="@+id/Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/topSection">
+
+        <ImageButton
+            android:id="@+id/prevMonthBtn"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:contentDescription="Last month"
+            android:background="@null"
+            android:src="@drawable/leftarw"
+            android:text="Previous" />
+
+        <TextView
+            android:id="@+id/monthText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Month"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/nextMonthBtn"
+            android:text="Next"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:background="@null"
+            android:contentDescription="Next month"
+            android:src="@drawable/rightarw"/>
+    </LinearLayout>
+
+    <!-- Calendar -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/calendarRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="8dp"
+        android:layout_below="@id/Button"
+        android:contentDescription="Calendar view showing current month"
+        android:visibility="visible" />
+
+    <!-- Character color square -->
+    <View
+        android:id="@+id/characterColorSquare"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/calendarRecyclerView"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#CCCCCC" />
+
+    <!-- Scrollable content container (event details only) -->
+    <ScrollView
+        android:id="@+id/scrollContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/characterColorSquare"
+        android:layout_above="@id/navigationBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Event details -->
+            <LinearLayout
+                android:id="@+id/eventDetailsPanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="8dp"
+                android:visibility="gone">
+                <include layout="@layout/event_basic_info" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <!-- Navigation bar fixed at bottom -->
+    <include
+        android:id="@+id/navigationBar"
+        layout="@layout/activity_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"/>
+
+</RelativeLayout>

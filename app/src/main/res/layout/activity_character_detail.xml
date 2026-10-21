@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Scrollable Main Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:id="@+id/characterDetailRoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Container with rounded background -->
+            <LinearLayout
+                android:id="@+id/backgroundContainer"
+                android:layout_width="match_parent"
+                android:layout_height="840dp"
+                android:background="@drawable/rounded_background"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- "X" Button -->
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="16dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Back to Characters"
+                    android:src="@drawable/cross" />
+
+                <!-- Character Category -->
+                <TextView
+                    android:id="@+id/characterCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Category"
+                    android:textAlignment="center"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <!-- Character Name -->
+                <TextView
+                    android:id="@+id/characterName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="Character Name"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Description -->
+                <TextView
+                    android:id="@+id/characterDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:gravity="start"
+                    android:textSize="18sp" />
+
+                <!-- Optional Nav Button Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" />
+
+                <!-- Character Image + View Fav Button -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/characterImage"
+                        android:layout_width="180dp"
+                        android:layout_height="250dp"
+                        android:layout_marginEnd="16dp"
+                        android:contentDescription="Character image" />
+
+                    <Button
+                        android:id="@+id/btnViewFavourite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View Favourite Location" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Vertically Centered Select Button Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:background="@android:color/transparent">
+
+        <ImageButton
+            android:id="@+id/btnPreviousArrow"
+            android:layout_width="85dp"
+            android:layout_height="79dp"
+            android:layout_marginEnd="16dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Previous Character"
+            android:src="@drawable/leftarw" />
+
+        <Button
+            android:id="@+id/selectButton"
+            android:layout_width="123dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Select" />
+
+        <ImageButton
+            android:id="@+id/btnNextArrow"
+            android:layout_width="85dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="16dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Next Character"
+            android:src="@drawable/rightarw" />
+    </LinearLayout>
+
+</FrameLayout>

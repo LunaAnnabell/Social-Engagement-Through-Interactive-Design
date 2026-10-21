@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".TimelineOfEventsActivity">
+
+    <!-- App Bar (Toolbar) -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Main Content Container -->
+    <LinearLayout
+        android:id="@+id/backgroundContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--TOP SECTION: Timeline Content -->
+        <include
+            android:id="@+id/topSection"
+            layout="@layout/category_tabs" />
+        <!-- MIDDLE SECTION: Timeline Content -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/characterNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipsy's plans"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/roundedBackground"
+        android:layout_height="705dp"
+        android:layout_width="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_background"
+        android:gravity="center"
+        app:layout_anchor="@+id/backgroundContainer"
+        app:layout_anchorGravity="center"/>
+
+    <FrameLayout
+        android:id="@+id/middleSection"
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        app:layout_anchor="@+id/backgroundContainer"
+        app:layout_anchorGravity="center">
+
+        <!-- Character Title -->
+
+        <!-- Timeline Image -->
+        <ImageView
+            android:id="@+id/timelineImage"
+            android:layout_width="200dp"
+            android:layout_height="705dp"
+            android:layout_gravity="center"
+            android:src="@drawable/editedtimeline" />
+
+        <!-- Character Image -->
+        <ImageView
+            android:id="@+id/characterImageView"
+            android:layout_width="153dp"
+            android:layout_height="239dp"
+            android:layout_gravity="bottom|start"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/tipsy" />
+        <!-- Event bubbles -->
+        <include
+            android:id="@+id/eventBubble1"
+            layout="@layout/event_bubble"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="128dp"
+            android:layout_marginTop="155dp" />
+
+        <include
+            android:id="@+id/eventBubble2"
+            layout="@layout/event_bubble"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="128dp"
+            android:layout_marginTop="390dp" />
+
+        <!-- Navigation Arrows -->
+        <ImageButton
+            android:id="@+id/btnTimelinePrev"
+            android:layout_width="85dp"
+            android:layout_height="79dp"
+            android:layout_gravity="center|start"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Previous character"
+            android:src="@drawable/leftarw" />
+
+        <ImageButton
+            android:id="@+id/btnTimelineNext"
+            android:layout_width="85dp"
+            android:layout_height="79dp"
+            android:layout_gravity="center|end"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Next character"
+            android:src="@drawable/rightarw" />
+
+    </FrameLayout>
+    <include
+        layout="@layout/activity_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_gravity="bottom" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

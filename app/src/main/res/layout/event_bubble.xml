@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="10dp"
+    android:gravity="center_horizontal">
+
+    <!-- Bubble box -->
+    <LinearLayout
+        android:id="@+id/bubbleContent"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bubble_background"
+        android:padding="0dp"
+        android:elevation="4dp">
+
+        <!-- Gray header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#DDDDDD"
+            android:padding="4dp"
+            android:gravity="start|center_vertical">
+
+            <TextView
+                android:id="@+id/eventDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:id="@+id/eventDivider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#3B82F6" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/eventTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_gravity="center"
+            android:text=""
+            android:textStyle="bold"
+            android:textSize="12sp" />
+
+        <!-- Button -->
+        <Button
+            android:id="@+id/eventButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="10dp"
+            android:text="See event"
+            android:textSize="10sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#000000" />
+    </LinearLayout>
+
+    <!-- Triangle Pointer -->
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="10dp"
+        android:src="@drawable/pointer_triangle"
+        android:contentDescription="Bubble pointer" />
+
+</LinearLayout>
