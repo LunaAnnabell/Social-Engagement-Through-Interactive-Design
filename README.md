@@ -1,0 +1,84 @@
+# Social — Aalborg Event & Community Discovery App
+
+[![Android](<https://img.shields.io/badge/Platform-Android%20Native-3DDC84?style=flat&logo=android&logoColor=white>)](https://developer.android.com)
+[![Java](<https://img.shields.io/badge/Language-Java%2011-ED8B00?style=flat&logo=openjdk&logoColor=white>)](https://www.oracle.com/java/)
+[![Gradle](<https://img.shields.io/badge/Build-Gradle%20Kotlin%20DSL-02303A?style=flat&logo=gradle&logoColor=white>)](https://gradle.org)
+[![Target SDK](<https://img.shields.io/badge/Target%20SDK-API%2035-blue.svg>)](https://developer.android.com/about/versions/15)
+[![Portfolio Case Study](<https://img.shields.io/badge/Case%20Study-lunaannabell.github.io-9cf?style=flat&logo=github>)](https://lunaannabell.github.io)
+
+---
+
+## The Hook
+
+**Social** is an Android mobile app designed to help university students and newcomers discover local events in Aalborg through tailored character mascots. Instead of relying on alcohol-heavy study starts or cluttered bulletin boards, users pick a character that matches their interests—Social, Music, Active, Creative, or Geeky—to explore curated events and venues around the city.
+
+---
+
+## Visuals
+
+![Social App Character Personas](app/src/main/res/drawable/characters.png)
+
+*The 5 Aalborg character archetypes: Tipsy (Social), Bongo (Music), Rally (Active), Sketchy (Creative), and Glitch (Geeky).*
+
+---
+
+## Tech Stack
+
+- **Platform:** Native Android (Java 11, minSdk 24, targetSdk 35)
+- **UI & Layouts:** Android XML (`ConstraintLayout`, `LinearLayout`, `FrameLayout`), `RecyclerView`
+- **Architecture:** Object-Oriented Programming (OOP), Custom Adapter Pattern, In-Memory Repository
+- **Build System:** Gradle (Kotlin DSL, Version Catalogs)
+- **Design Tools:** Figma (UI/UX wireframes & user flows), Clip Studio Paint (Digital character illustration)
+
+---
+
+## My Exact Role
+
+> **Role:** Lead Android Developer, UI Designer & Character Creator (6-person team project at Aalborg University)
+
+- **Character Design, Concept & Lore:**
+  - Co-designed the core mascot concept: personified everyday activity objects rather than human stereotypes to keep them approachable, gender-neutral, and fun.
+  - Developed the characters' names (**Tipsy, Bongo, Rally, Sketchy, Glitch**), personality traits, and local Aalborg backstories.
+  - Digitally hand-drew all 5 character illustrations in **Clip Studio Paint**.
+- **UI/UX Design (Figma):** Created high-fidelity mobile wireframes, component layouts, and intuitive user navigation flows.
+- **Android UI Development (XML):** Translated Figma wireframes into responsive Android XML layouts, including the event timeline, character detail cards, profile views, and custom rounded shapes.
+- **Activity & Controller Logic (Java):**
+  - **Custom Calendar:** Built [`CalenderActivity.java`](app/src/main/java/com/example/loginpage/CalenderActivity.java) and [`CalendarAdapter.java`](app/src/main/java/com/example/loginpage/CalendarAdapter.java) with dynamic month math, day-of-week grid alignment, and event badge highlights.
+  - **Event Timeline:** Programmed [`TimelineOfEventsActivity.java`](app/src/main/java/com/example/loginpage/TimelineOfEventsActivity.java) with character switching, category tab filtering, and multi-screen `Intent` navigation.
+  - **Dynamic Theming:** Implemented runtime color adjustments ([`Colours.java`](app/src/main/java/com/example/loginpage/Colours.java)) that dynamically tint cards and buttons to match each character's signature color.
+- **Data Modeling & Seed Data:** Designed OOP models (`Characters`, `Event`, `Venue`) and seeded [`FakeDatabase.java`](app/src/main/java/com/example/loginpage/FakeDatabase.java) with real Aalborg cultural spaces.
+- **Codebase Housekeeping:** Led refactoring efforts, pruning obsolete prototype files and standardizing code documentation to keep the repository clean and maintainable.
+
+---
+
+## Case Study
+
+> 🔗 **Read the full design breakdown on my portfolio:**
+> **[https://lunaannabell.github.io](https://lunaannabell.github.io)**
+
+---
+
+## Key Features
+
+- **Persona-Driven Discovery:** Pick an object-based mascot (Tipsy, Bongo, Rally, Sketchy, or Glitch) to personalize event feeds.
+- **Interactive Event Timeline:** Browse upcoming happenings tailored to your interests with dynamic theme colors.
+- **Custom Monthly Calendar:** A 7-column calendar grid highlighting days with events and expandable detail cards.
+- **Curated Aalborg Venues:** Explore local cultural hotspots with addresses, descriptions, and event schedules.
+- **Authentication & Profile:** Demo login verification with password toggle and session persistence.
+
+---
+
+## How to Run
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/LunaAnnabell/Social.git
+   ```
+2. Open the project in **Android Studio**.
+3. Let Gradle sync dependencies.
+4. Select an Android emulator or connected device and click **Run** (`Shift + F10`).
+
+### Demo Login
+
+- **Username / Email:** `admin`
+- **Password:** `1234`

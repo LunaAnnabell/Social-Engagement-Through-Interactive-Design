@@ -1,58 +1,51 @@
 package com.example.loginpage;
 
 /**
- * Creates public class userlogin.
- * It stores a username and password entered by the user and provides
- * a method to validate the credentials against predefined valid values
+ * Validates user credentials against authentication credentials.
+ * Stores authenticated session data for access by profile activities.
  */
 public class Userlogin {
-    /**
-     * the username entered by the user
-     */
+
     private static String username;
-    /**
-     * the password entered by the user
-     */
     private static String password;
-    /**
-     * the predefinbed value for username and password
-     */
 
     private final String validUsername = "admin";
     private final String validPassword = "1234";
 
     /**
-     * Construct a Userlogin object with the specified username and password
+     * Constructs a Userlogin instance with the supplied username and password.
      *
-     * @param username the username entered by the user
-     * @param password the password entered by the user
+     * @param username the entered username
+     * @param password the entered password
      */
-
     public Userlogin(String username, String password) {
-        this.username = username;
-        this.password = password;
+        Userlogin.username = username;
+        Userlogin.password = password;
     }
 
     /**
-     * checks whether the provided username and password match
-     * the predefined valid credentials
+     * Verifies whether the provided username and password match authorized credentials.
      *
-     * @return true if both username and password is valid, false otherwise
+     * @return true if valid credentials, false otherwise
      */
     public boolean isValidLogin() {
-        return username.equals(validUsername) && password.equals(validPassword);
+        return validUsername.equals(username) && validPassword.equals(password);
     }
 
     /**
-     * Returns the username entered by the user
+     * Returns the username of the currently logged-in user.
      *
-     * @return the username
+     * @return current username
      */
     public static String getUsername() {
-
         return username;
     }
 
+    /**
+     * Returns the password of the currently logged-in user.
+     *
+     * @return current password
+     */
     public static String getPassword() {
         return password;
     }

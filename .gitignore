@@ -1,15 +1,36 @@
-*.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+# Gradle and Build Cache
+.gradle/
+build/
+app/build/
+*.apk
+*.aab
+
+# Local Configuration & Private SDK Paths
 local.properties
+.cxx/
+.externalNativeBuild/
+
+# Android Studio & IntelliJ IDEA
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.idea/deploymentTargetSelector.xml
+*.iml
+*.iws
+*.ipr
+
+# OS Generated Junk
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Diagnostics and Captures
+/captures/
+*.log

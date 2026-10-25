@@ -1,21 +1,19 @@
 package com.example.loginpage;
-//This file is not used at this point but thought to be used for the map implementation
 
 /**
- * The {@code Coordinates} class represents a geographical location
- * defined by its latitude and longitude.
+ * Represents a geographic coordinate defined by latitude and longitude.
+ * Used by {@link Venue} entities for spatial mapping, geolocation filtering,
+ * and future map provider integration.
  */
 public class Coordinates {
-    //Attributes
     private double latitude;
     private double longitude;
 
-    //Methods
     /**
      * Constructs a {@code Coordinates} object with the specified latitude and longitude.
      *
-     * @param latitude  the latitude of the location
-     * @param longitude the longitude of the location
+     * @param latitude  the latitude in decimal degrees
+     * @param longitude the longitude in decimal degrees
      */
     public Coordinates(double latitude, double longitude) {
         this.latitude = latitude;
@@ -29,6 +27,7 @@ public class Coordinates {
     public double getLatitude() {
         return latitude;
     }
+
     /**
      * Returns the longitude of this coordinate.
      * @return the longitude value

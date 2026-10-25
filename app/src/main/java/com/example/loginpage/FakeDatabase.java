@@ -111,13 +111,8 @@ public class FakeDatabase {
         );
 
         /**
-         * Looping through each character, giving them each the corresponding event from the list of events
+         * Associate each event with its corresponding persona character based on matching names.
          */
-//        for (int i = 0; i < characterList.size(); i++) {
-//            characterList.get(i).addEvent(eventList.get(i));
-//        }
-//
-//    }
         for (Characters character : characterList) {
             for (Event event : eventList) {
                 if (event.getCharacterName().equals(character.getName())) {

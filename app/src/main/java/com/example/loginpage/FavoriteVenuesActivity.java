@@ -116,7 +116,6 @@ public class FavoriteVenuesActivity extends AppCompatActivity {
         layoutParams.setMargins(0, dpToPx(8), 0, dpToPx(8));
         layout.setLayoutParams(layoutParams);
         layout.setGravity(Gravity.CENTER_VERTICAL);
-       // layout.setBackgroundColor(Color.parseColor("#F5F5F5")); // optional light background
 
         // Add all views to the parent layout
         layout.addView(venueName);
@@ -148,14 +147,12 @@ public class FavoriteVenuesActivity extends AppCompatActivity {
             finish();  // Character not found; exit gracefully
             return;
         }
-        // Debug: print number of favorite venues for this character
-        if (character.getVenues() != null) {
-        }
-        if (!character.getVenues().isEmpty()) {
+
+        if (character.getVenues() != null && !character.getVenues().isEmpty()) {
             Venue venueCity = character.getVenues().get(0);
             venueCityName.setText("In " + venueCity.getCityName());
         } else {
-            venueCityName.setText("No favorite venues found ");
+            venueCityName.setText("No favorite venues found");
         }
 
         characterImage.setImageResource(character.getImageResourceId());

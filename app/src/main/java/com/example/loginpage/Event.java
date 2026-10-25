@@ -1,9 +1,7 @@
 package com.example.loginpage;
 
-import android.media.Image;
-import java.util.Date;
 /**
- * Represents an event with a date, title, description, image, venue, and related character.
+ * Represents an event with a date, title, description, image, venue, and related character persona.
  */
 public class Event {
     private String date;

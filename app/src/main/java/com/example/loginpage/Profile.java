@@ -1,79 +1,77 @@
 package com.example.loginpage;
-//NOT USED, but intended for implementation of profile
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Represents a user's profile with their username, email, and a list of characters.
+ * Represents a user profile domain model.
+ * Encapsulates credentials, contact information, and saved persona characters.
  */
 public class Profile {
 
-    // Attributes
     private String username;
     private String email;
-    private List<Character> characters; // List of characters associated with the user
+    private List<Characters> characters;
 
-    // Constructor
     /**
      * Creates a new Profile with the given username and email.
-     * Initializes an empty list of characters.
+     * Initializes an empty list of associated characters.
      *
-     * @param username the username for this profile
-     * @param email the email address for this profile
+     * @param username the display username for this profile
+     * @param email    the email address associated with the account
      */
     public Profile(String username, String email) {
         this.username = username;
         this.email = email;
-        this.characters = new ArrayList<>(); // Initialize the list of characters
+        this.characters = new ArrayList<>();
     }
 
-    // Methods
-
     /**
-     * Adds a character to the profile's list of characters.
-     * @param character the character to add
+     * Associates a persona character with this profile.
+     *
+     * @param character the character persona to add
      */
-    public void addCharacter(Character character) {
+    public void addCharacter(Characters character) {
         characters.add(character);
     }
 
-
     /**
-     * Replaces an existing character in the list with a new one.
-     * If the old character is found, it is updated.
+     * Replaces an existing character in the list with an updated persona.
      *
      * @param oldCharacter the character to be replaced
-     * @param newCharacter the new character to add
+     * @param newCharacter the updated character instance
      */
-    public void editCharacter(Character oldCharacter, Character newCharacter) {
+    public void editCharacter(Characters oldCharacter, Characters newCharacter) {
         int index = characters.indexOf(oldCharacter);
         if (index != -1) {
-            characters.set(index, newCharacter); // Replace the old character with the new one
+            characters.set(index, newCharacter);
         }
     }
 
     /**
-     * Gets the username of the profile.
-     * @return the username
+     * Gets the profile username.
+     *
+     * @return username string
      */
     public String getUsername() {
         return username;
     }
 
     /**
-     * Gets the email of the profile.
-     * @return the email address
+     * Gets the profile email.
+     *
+     * @return email string
      */
     public String getEmail() {
         return email;
     }
 
     /**
-     * Gets the list of characters linked to this profile.
+     * Gets the list of persona characters linked to this profile.
      *
-     * @return a list of characters
+     * @return list of Characters
      */
-    public List<Character> getCharacters() {
+    public List<Characters> getCharacters() {
         return characters;
     }
 }
